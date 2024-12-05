@@ -3,6 +3,7 @@ import './App.css';
 import { ChessList } from './ChessList';
 import { ChessSingle } from './ChessSingle';
 import { ChessDel } from './ChessDel';
+import { ChessMod } from './ChessMod';
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
         <Route path="/" element={<ChessList />} />
         <Route path="/chess/:chessId" element={<ChessSingle />} />
         <Route path="/chess-del/:chessId" element={<ChessDel />} />
+        <Route path="/chess-mod/:chessId" element={<ChessMod />} />
       </Routes>
     </Router>
   );

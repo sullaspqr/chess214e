@@ -46,7 +46,7 @@ export const ChessList = () => {
                         </div>
                         <div className="text-center">
                         <Link to={"/chess/" + chess.id}><i className="bi bi-text-paragraph btn btn-primary"></i></Link>&nbsp;&nbsp;&nbsp;
-                        <Link to="/"><i className="bi bi-pencil-square btn btn-warning"></i></Link>&nbsp;&nbsp;&nbsp;
+                        <Link to={"/chess-mod/" + chess.id}><i className="bi bi-pencil-square btn btn-warning"></i></Link>&nbsp;&nbsp;&nbsp;
                         <Link to={"/chess-del/" + chess.id}><i className="bi bi-trash3 btn btn-danger"></i></Link>
                         </div>
                     </div>

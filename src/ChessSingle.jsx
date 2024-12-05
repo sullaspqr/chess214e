@@ -5,6 +5,7 @@ import axios from 'axios';
 export const ChessSingle = () => {
     const params = useParams();
     const id = params.chessId;
+    //const {chessId} = useParams(); új felírás
     const [chess, setChess] = useState({});
     const [isPending, setPending] = useState(false);
 
@@ -40,9 +41,9 @@ return (
                              style={{ maxHeight: "200px" }} className="img-fluid" alt={chess.name} />
                         </div>
                         <div className="text-center">
-                        <Link to="/"><i className="bi bi-text-paragraph btn btn-primary"></i></Link>&nbsp;&nbsp;&nbsp;
-                        <Link to="/"><i className="bi bi-pencil-square btn btn-warning"></i></Link>&nbsp;&nbsp;&nbsp;
-                        <Link to="/"><i className="bi bi-trash3 btn btn-danger"></i></Link>
+                        <Link to="/"><i className="bi bi-backspace btn btn-primary"></i></Link>&nbsp;&nbsp;&nbsp;
+                        <Link to={"/chess-mod/" + chess.id}><i className="bi bi-pencil-square btn btn-warning"></i></Link>&nbsp;&nbsp;&nbsp;
+                        <Link to={"/chess-del/" + chess.id}><i className="bi bi-trash3 btn btn-danger"></i></Link>
                         </div>
                     </div>
                     </div>
